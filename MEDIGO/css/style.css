@@ -1,0 +1,538 @@
+/* Reset default margins & paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212; /* dark grey background */
+    color: #eee; /* light text */
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e; /* slightly lighter dark grey */
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #ff7a00; /* orange logo/title */
+}
+
+header nav a {
+    color: #eee;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #ff7a00;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1e1e1e;
+}
+
+#hero h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff7a00;
+}
+
+#hero p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#hero input {
+    padding: 10px 20px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 50px; /* makes it oval */
+    background-color: #2c2c2c;
+    color: #eee;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#hero input:focus {
+    border-color: #ff7a00;
+    box-shadow: 0 0 5px #ff7a00;
+}
+
+
+#hero input::placeholder {
+    color: #aaa;
+}
+
+#hero button {
+    padding: 10px 25px;
+    background-color: #ff7a00;
+    color: #121212;
+    border: none;
+    border-radius: 50px; /* curved ends */
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#hero button:hover {
+    background-color: #e66d00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1e1e1e;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+#results {
+    padding: 20px;
+    text-align: center;
+}
+
+.doctor-card {
+    background-color: #1e1e1e;
+    margin: 15px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: left;
+    color: #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.doctor-card h3 {
+    color: #ff7a00;
+    margin-bottom: 5px;
+}
+
+.doctor-card button {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.doctor-card button:hover {
+    background-color: #e66d00;
+}
+
+#doctor-profile {
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-card {
+    background-color: #1e1e1e;
+    color: #eee;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.profile-card h2 {
+    color: #ff7a00;
+    margin-bottom: 10px;
+}
+
+.profile-card button {
+    margin-top: 15px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-card button:hover {
+    background-color: #e66d00;
+}
+
+#booking-form {
+    padding: 20px;
+    text-align: center;
+}
+
+#booking-form form {
+    background-color: #1e1e1e;
+    color: #eee;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+#booking-form label {
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+#booking-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #eee;
+}
+
+#booking-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#booking-form button:hover {
+    background-color: #e66d00;
+}
+
+#login-form {
+    padding: 20px;
+    text-align: center;
+}
+
+#login-form form {
+    background-color: #1e1e1e;
+    color: #eee;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+#login-form label {
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #eee;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#login-form button:hover {
+    background-color: #e66d00;
+}
+
+#offers {
+    padding: 20px;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.offer-card {
+    background-color: #1e1e1e;
+    color: #eee;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.offer-card h3 {
+    color: #ff7a00;
+}
+#signup-form {
+    padding: 20px;
+    text-align: center;
+}
+
+#signup-form form {
+    background-color: #1e1e1e;
+    color: #eee;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+#signup-form label {
+    color: #ff7a00;
+    font-weight: bold;
+}
+
+#signup-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #eee;
+}
+
+#signup-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#signup-form button:hover {
+    background-color: #e66d00;
+}
+/* 🔷 General Body */
+body {
+    background-color: #121212;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔷 Header & Nav */
+header {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #ff7a00;
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #eee;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff7a00;
+}
+
+/* 🔷 Footer */
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* 🔷 Search Bar */
+#search-bar {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2c2c2c;
+    color: #eee;
+    margin-bottom: 10px;
+}
+
+#search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-bar button:hover {
+    background-color: #e66d00;
+}
+
+/* 🔷 Doctors Section */
+#doctors {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.doctor-card {
+    background-color: #1e1e1e;
+    color: #eee;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.doctor-card h3 {
+    margin-top: 0;
+    color: #ff7a00;
+}
+
+.doctor-card button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.doctor-card button:hover {
+    background-color: #e66d00;
+}
+
+#contact {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+form {
+    flex: 1;
+    min-width: 250px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #eee;
+}
+
+form button {
+    background-color: #ff7a00;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #e66d00;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 250px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#appointments {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#appointments h2 {
+    text-align: center;
+    color: #ff7a00;
+}
+
+.appointment {
+    background-color: #1e1e1e;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.appointment h3 {
+    color: #ff7a00;
+    margin-top: 0;
+}
+
+.appointment button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #ff7a00;
+    color: #121212;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.appointment button:hover {
+    background-color: #e66d00;
+}

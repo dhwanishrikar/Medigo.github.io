@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Doctors - Medigo</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>MEDIGO✙</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="searchbutton.html" style="color:#ff7a00;">Search Doctors</a>
+        <a href="offers.html">Offers</a>
+        <a href="appointments.html">Appointment</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+<section id="search-bar">
+    <input type="text" id="searchInput" placeholder="Search by doctor, specialty, or location">
+    <button id="searchBtn">Search</button>
+</section>
+
+<section id="doctors">
+    <div class="doctor-card">
+        <h3>Dr. Shruthi Shrikar</h3>
+        <p>Specialty: Orthodontist</p>
+        <p>Location: Mangalore</p>
+        <button onclick="location.href='doctor-shruthi.html'">View Profile</button>
+    </div>
+
+    <div class="doctor-card">
+        <h3>Dr. Shrikar B</h3>
+        <p>Specialty: Dermatologist</p>
+        <p>Location: Bangalore</p>
+        <button onclick="location.href='doctor-shrikar.html'">View Profile</button>
+    </div>
+
+    <div class="doctor-card">
+        <h3>Dr. Uma Shrikar</h3>
+        <p>Specialty: Oncologist</p>
+        <p>Location: Mangalore</p>
+        <button onclick="location.href='doctor-uma.html'">View Profile</button>
+    </div>
+
+    <div class="doctor-card">
+        <h3>Dr. Dhwani Shrikar</h3>
+        <p>Specialty: Veterinary</p>
+        <p>Location: Puttur</p>
+        <button onclick="location.href='doctor-duni.html'">View Profile</button>
+    </div>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2025 Medigo. All rights reserved.</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBtn = document.getElementById("searchBtn");
+    const searchInput = document.getElementById("searchInput");
+    const cards = document.querySelectorAll(".doctor-card");
+
+    searchBtn.addEventListener("click", () => {
+        const query = searchInput.value.trim().toLowerCase();
+
+        let found = false;
+
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(query)) {
+                card.style.display = "block";
+                found = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            if (!document.getElementById("noResult")) {
+                const msg = document.createElement("p");
+                msg.id = "noResult";
+                msg.style.color = "orange";
+                msg.textContent = `No doctors found for "${query}".`;
+                document.getElementById("doctors").appendChild(msg);
+            }
+        } else {
+            const existingMsg = document.getElementById("noResult");
+            if (existingMsg) existingMsg.remove();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

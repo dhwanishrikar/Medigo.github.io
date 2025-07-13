@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Medigo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>Medigo</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="searchbutton.html" style="color:#ff7a00;">Search Doctors</a>
+        <a href="offers.html">Offers</a>
+        <a href="appointments.html">Appointment</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+    <section id="results">
+        <h2>Search Results</h2>
+        <p>Showing doctors matching your search:</p>
+
+        <div class="doctor-card">
+            <h3>Dr. Shruthi Shrikar</h3>
+            <p>Specialty: Orthodontist</p>
+            <p>Location: Mangalore</p>
+            <button onclick="location.href='doctor-shruthi.html'">View Profile</button>
+
+        </div>
+
+        <div class="doctor-card">
+            <h3>Dr. Shrikar B</h3>
+            <p>Specialty: Dermatologist</p>
+            <p>Location: Bangalore</p>
+            <button onclick="location.href='doctor-shrikar.html'">View Profile</button>
+        </div>
+
+        <div class="doctor-card">
+            <h3>Dr. Uma Shrikar </h3>
+            <p>Specialty: Oncologist</p>
+            <p>Location: Mangalore</p>
+            <button onclick="location.href='doctor-uma.html'">View Profile</button>
+        </div>
+
+        <div class="doctor-card">
+            <h3>Dr. Dhwani Shrikar</h3>
+            <p>Specialty: Veternary</p>
+            <p>Location: Puttur</p>
+            <button onclick="location.href='doctor-duni.html'">View Profile</button>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Medigo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get("query")?.toLowerCase();
+
+    const cards = document.querySelectorAll(".doctor-card");
+    let found = false;
+
+    if (query) {
+        cards.forEach(card => {
+            const text = card.innerText.toLowerCase();
+            if (text.includes(query)) {
+                card.style.display = "block";
+                found = true;
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            const resultsSection = document.getElementById("results");
+            resultsSection.insertAdjacentHTML(
+                "beforeend",
+                `<p style="color:orange;">No doctors found for "${query}".</p>`
+            );
+        }
+    }
+});
+</script>
